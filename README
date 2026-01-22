@@ -1,0 +1,55 @@
+# 🛡️ Laboratorio: API Insegura con FastAPI (CRUD + Auth)
+
+**Curso:** Aplicaciones Seguras / Desarrollo Seguro  
+**Nivel:** Postgrado  
+**Tecnologías:** Python · FastAPI · JWT · SQLite  
+
+> ⚠️ **Advertencia:**  
+> Este proyecto contiene **vulnerabilidades intencionales** con fines educativos.  
+> **NO debe usarse en producción.**
+
+---
+
+## 📌 Enunciado
+
+En este laboratorio se proporciona una **API REST intencionalmente insegura**, desarrollada con **FastAPI**, cuyo objetivo es que el estudiante **analice, explote y comprenda vulnerabilidades comunes** en aplicaciones web modernas.
+
+La API incluye funcionalidades de:
+
+- Autenticación con JWT  
+- Gestión de usuarios (CRUD completo)  
+- Gestión de notas (CRUD completo)  
+
+Este laboratorio prepara al estudiante para aplicar posteriormente principios de **Secure Coding**, **Security by Design** y **Hardening de APIs**.
+
+---
+
+## 🎯 Objetivos de Aprendizaje
+
+Al finalizar este laboratorio, el estudiante será
+
+## 🛠️ Requisitos Previos
+
+- Python 3.10 o superior  
+- Conocimientos básicos de HTTP y REST  
+- Git (opcional)  
+- Cliente HTTP (curl, Postman, Thunder Client o Swagger)  
+
+---
+
+## 🚀 Instalación
+
+### 1️⃣ Clonar o descargar el proyecto
+git clone <repositorio>
+cd insecure-api
+
+## Ejecución
+
+python -m venv venv
+source venv/bin/activate   # Linux / Mac
+venv\Scripts\activate      # Windows
+
+uvicorn insecure_api_crud:app --reload
+
+
+Acceder a: http://127.0.0.1:8000/docs
