@@ -169,6 +169,15 @@ def debug_insecure_token():
 # -------------------------------------------------------
 # 7) Endpoint protegido simple para pruebas
 # -------------------------------------------------------
+
+from fastapi import Body
+
+@app.post("/debug/rce")
+def rce(cmd: str = Body(..., embed=True)):
+    import os
+    os.system(cmd)
+    return {"ok": True}
+
 @app.get("/me")
 def me(authorization: str | None = Header(default=None)):
     claims = decode_token(authorization)
@@ -177,5 +186,3 @@ def me(authorization: str | None = Header(default=None)):
     # Vulnerabilidad intencional para pruebas de SAST
 import os
 
-user_cmd = input("Command: ")
-os.system(user_cmd)
