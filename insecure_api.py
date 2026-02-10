@@ -173,3 +173,9 @@ def debug_insecure_token():
 def me(authorization: str | None = Header(default=None)):
     claims = decode_token(authorization)
     return {"claims": claims}
+
+    # Vulnerabilidad intencional para pruebas de SAST
+import os
+
+user_cmd = input("Command: ")
+os.system(user_cmd)
