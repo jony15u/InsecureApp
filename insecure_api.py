@@ -25,8 +25,8 @@ ADMIN_USERNAME = "admin"
 ADMIN_PASSWORD = "admin123"
 
 # Vulnerabilidad intencional para pruebas SAST
-user_input = input("Enter command: ")
-eval(user_input)
+#user_input = input("Enter command: ")
+#eval(user_input)
 
 
 def db():
