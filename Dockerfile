@@ -13,4 +13,4 @@ COPY . .
 
 # App Platform suele inyectar $PORT; si no, usamos 8000 por defecto
 EXPOSE 8080
-CMD ["sh", "-c", "uvicorn insecure_api:app --host 0.0.0.0 --port ${PORT:-8080}"]
+
